@@ -49,3 +49,56 @@ python manage.py runserver
 
 ### Eğer projeye katkıda bulunmak istiyorsanız, lütfen bir konu açın veya bir çekme isteği gönderin. Katkılarınızı bekliyoruz!
 
+# EN
+
+# WhatsApp Clone Chat Application
+
+This project represents an experience of developing a web-based chat application using Python and JavaScript technologies. This WhatsApp-like application is built using Redix server and web sockets in Django.
+
+## Features
+
+- **Message History and Database Operations:** Utilizing Redix server, both users' message histories are securely stored and managed.
+- **Media File Processing:** Capable of detecting and processing photo, video, or audio files within messages sent via JavaScript.
+
+- **Voice Recording Support:** Users can easily send voice files through a specialized infrastructure when they wish to record a voice message.
+
+## Installation
+
+1. Clone the project:
+
+```bash
+git clone https://github.com/your-username/whatsapp-clone.git
+cd whatsapp-clone
+```
+
+2. Create a virtual environment and install dependencies:
+```bash
+python -m venv venv
+source venv/bin/activate   # or 'venv\Scripts\activate' for Windows
+pip install -r requirements.txt
+```
+
+3. Apply Django migrations:
+```bash
+python manage.py migrate
+```
+
+4. Start the Redix server::
+```bash
+redis-server
+```
+
+5. Start the Django development server:
+```bash
+python manage.py runserver
+```
+
+## Usage
+
+1. Open your browser and go to http://localhost:8000.
+2. Start using the chat application.
+3. Explore the application's features by sending photos, videos, or audio files and recording voice messages.
+
+## Contributing
+
+If you would like to contribute to the project, please open an issue or submit a pull request. Your contributions are welcome!
