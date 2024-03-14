@@ -1,104 +1,76 @@
-# WhatsApp Klonu Chat Uygulaması
+# TR
+##  WhatsApp Klonu Chat Uygulaması
+Bu proje  **Python** ve **Javascript** teknolojileri kullanılarak geliştirilmiştir. Projenin ana amacı web socketler ile çalışma deneyimini kendime katabilmektir. 
 
-Bu proje, web tabanlı bir chat uygulamasını geliştirmek için Python ve JavaScript teknolojilerini kullanan bir deneyimi temsil etmektedir. WhatsApp benzeri bu uygulama, Redix server ve Django üzerinde web soketleri kullanılarak geliştirilmiştir.
+### Proje özellikleri:
+----
+ 1. Redix server kullanılmıştır.
+ 2. Mesaj geçmişi veritabanına kayıt edilerek kullanıcıların mesaj geçmişlerinin görüntülenmesi hedeflenmiştir.
+ 3. Kullanıcılar birbirilerine **resim**, **video** gibi medya dosyaları gönderebilir ve bunları görüntüleyebilirler.
+ 4. Ses kaydı göndermek isteyen kullanıcılar için oluşturulmuş olan alt yapı sayesinde kullanıcılar birbirlerine ses kaydı gönderebilirler.
 
-## Özellikler
+### Kurulum
+-------
 
-- **Mesaj Geçmişi ve Veritabanı İşlemleri:** Redix server kullanılarak her iki kullanıcının mesaj geçmişi güvenli bir şekilde saklanır ve yönetilir.
-- **Medya Dosyalarını İşleme:** JavaScript tarafında gelen mesajlar içindeki fotoğraf, video veya ses dosyalarını algılayarak işleme yeteneği.
+ - Projeyi Kopyalayın:
+	`git clone https://github.com/BatuhanGurbuzz/DjangoChatApp.git`
+	
+- Virtual environment oluşturun ve bağımlılıkları yükleyin(Opsiyoneldir):
+	`python -m venv venv source venv/bin/activate veya  venv\Scripts\activate' Windows için pip install -r requirements.txt`
+	
+- Terminali açın, dosyanın bulunduğu dizine gidin django migrasyonları uygulayın:
+	`python manage.py migrate veya django-admin migrate`
+	
+-   Redix server'ı başlatın:
+	`redis-server`
 
-- **Ses Kaydı Desteği:** Kullanıcılar ses kaydı atmak istediklerinde özel bir altyapı sayesinde ses dosyalarını kolayca gönderebilirler.
+- 5.  Django development server'ı başlatın:
+	`python manage.py runserver veya django-admin runserver`
 
-## Kurulum
+### Nasıl Kullanabilirsiniz?
+-	Projeyi çalıştırdıktan sonra tarayıcıyı açın ve [http://localhost:8000](http://localhost:8000/) adlı adrese gidin ve kayıtlı olan kullanıcılardan bir tanesine giriş yapın.
+-	Giriş işlemini yaptıktan sonra kullanmaya başlayabilirsiniz.
 
-1. Projeyi kopyalayın:
-
-```bash
-git clone https://github.com/sizin-kullanici-adi/whatsapp-klonu.git
-cd whatsapp-klonu
-```
-
-2. Virtual environment oluşturun ve bağımlılıkları yükleyin:
-```bash
-python -m venv venv
-source venv/bin/activate   # veya 'venv\Scripts\activate' Windows için
-pip install -r requirements.txt
-```
-
-3. Django migrasyonları uygulayın:
-```bash
-python manage.py migrate
-```
-
-4. Redix server'ı başlatın::
-```bash
-redis-server
-```
-
-5. Django development server'ı başlatın:
-```bash
-python manage.py runserver
-```
-
-## Kullanım
-1. Tarayıcınızdan http://localhost:8000 adresine gidin.
-2. Chat uygulamasını kullanmaya başlayın.
-3. Fotoğraf, video veya ses dosyaları göndererek ve ses kaydı yaparak uygulamanın özelliklerini keşfedin.
-
-## Katkıda bulunma
-
-### Eğer projeye katkıda bulunmak istiyorsanız, lütfen bir konu açın veya bir çekme isteği gönderin. Katkılarınızı bekliyoruz!
-
+# Proje Fotoğrafları
+1. Giriş Sayfası
+![Opera-Anlik-Goruntu_2024-03-14_143117_127.0.0.1.png](https://www.resimupload.org/images/2024/03/14/Opera-Anlik-Goruntu_2024-03-14_143117_127.0.0.1.png)
+2. Anasayfa 
+![Opera-Anlik-Goruntu_2024-03-14_143141_127.0.0.1.png](https://www.resimupload.org/images/2024/03/14/Opera-Anlik-Goruntu_2024-03-14_143141_127.0.0.1.png)
+3. Sohbet sayfası iki kullanıcı arasında
+![Opera-Anlik-Goruntu_2024-03-14_143152_127.0.0.1.png](https://www.resimupload.org/images/2024/03/14/Opera-Anlik-Goruntu_2024-03-14_143152_127.0.0.1.png)
 # EN
+## WhatsApp Clone Chat Application
+This project is developed using **Python** and **Javascript** technologies. The main purpose of the project is to gain experience working with web sockets.
 
-# WhatsApp Clone Chat Application
+### Project features:
+1.  Redis server is used.
+2.  User message history is saved to the database to allow users to view their message histories.
+3.  Users can send each other media files such as **images** and **videos** and view them.
+4.  Thanks to the infrastructure created for users who want to send voice recordings, users can send voice recordings to each other.
 
-This project represents an experience of developing a web-based chat application using Python and JavaScript technologies. This WhatsApp-like application is built using Redix server and web sockets in Django.
+##  Installation
 
-## Features
+-   Clone the Project: `git clone https://github.com/BatuhanGurbuzz/DjangoChatApp.git`
+    
+-   Create a virtual environment and install dependencies (Optional): `python -m venv venv source venv/bin/activate` or `venv\Scripts\activate` for Windows `pip install -r requirements.txt`
+    
+-   Open a terminal, navigate to the directory where the file is located, and apply Django migrations: `python manage.py migrate` or `django-admin migrate`
+    
+-   Start the Redis server: `redis-server`
+    
+-   Start the Django development server: `python manage.py runserver` or `django-admin runserver`
+    
 
-- **Message History and Database Operations:** Utilizing Redix server, both users' message histories are securely stored and managed.
-- **Media File Processing:** Capable of detecting and processing photo, video, or audio files within messages sent via JavaScript.
+## How to Use?
 
-- **Voice Recording Support:** Users can easily send voice files through a specialized infrastructure when they wish to record a voice message.
+-   After running the project, open a browser and go to [http://localhost:8000](http://localhost:8000/), then log in with one of the registered users.
+-   After logging in, you can start using it.
 
-## Installation
+# Project Photos
+ 1. Login Page
+![Opera-Anlik-Goruntu_2024-03-14_143117_127.0.0.1.png](https://www.resimupload.org/images/2024/03/14/Opera-Anlik-Goruntu_2024-03-14_143117_127.0.0.1.png)
 
-1. Clone the project:
-
-```bash
-git clone https://github.com/your-username/whatsapp-clone.git
-cd whatsapp-clone
-```
-
-2. Create a virtual environment and install dependencies:
-```bash
-python -m venv venv
-source venv/bin/activate   # or 'venv\Scripts\activate' for Windows
-pip install -r requirements.txt
-```
-
-3. Apply Django migrations:
-```bash
-python manage.py migrate
-```
-
-4. Start the Redix server::
-```bash
-redis-server
-```
-
-5. Start the Django development server:
-```bash
-python manage.py runserver
-```
-
-## Usage
-
-1. Open your browser and go to http://localhost:8000.
-2. Start using the chat application.
-3. Explore the application's features by sending photos, videos, or audio files and recording voice messages.
-
-## Contributing
-
-If you would like to contribute to the project, please open an issue or submit a pull request. Your contributions are welcome!
+2. Home
+![Opera-Anlik-Goruntu_2024-03-14_143141_127.0.0.1.png](https://www.resimupload.org/images/2024/03/14/Opera-Anlik-Goruntu_2024-03-14_143141_127.0.0.1.png)
+3. Chat Page
+![Opera-Anlik-Goruntu_2024-03-14_143152_127.0.0.1.png](https://www.resimupload.org/images/2024/03/14/Opera-Anlik-Goruntu_2024-03-14_143152_127.0.0.1.png)
